@@ -51,6 +51,7 @@ header .nav-bar{
       flex-direction: column;
     }
   }
+  
   .gallery {
     display: flex;
     flex-direction: row;
@@ -84,6 +85,11 @@ header .nav-bar{
         transition: 0.5s;
     }
 }
+@media (max-width: 850px) {
+    .nav-bar {
+      flex-direction: column;
+    }
+  }
 .divi{
     background-color: #45b12a;
     min-height: 30px;
