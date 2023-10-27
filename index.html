@@ -40,7 +40,21 @@
                   </div>
                 </div>
               </div>
-              <span style="font-size: 30px; cursor: pointer; display: none;" onclick="openNavMobile">&#9776; Open Sidebar</span>
+              <!--Mobile view sidebar-->
+              <div class="content">
+                <p style="font-size:30px;cursor:pointer" onclick="toggleNav()">&#9776;</p>
+              </div>
+              <div class="mediamobo">
+                <div class="sidebar" id="mySidebar">
+                    <a  href="javascript:void(0)" class="closebtn" onclick="toggleNav()"></a> <!-- Use a single button for open and close -->
+                  <a class="mobobutton" href="#">Home</a>
+                  <a class="mobobutton" href="#">Products</a>
+                  <a class="mobobutton" href="#">Brands</a>
+                  <a class="mobobutton" href="#">About</a>
+                  <a class="mobobutton" href="#">Contact</a>
+                </div>
+                <div class="overlay" onclick="toggleNav()"></div>
+             </div>
         </header>
         <div class="short"></div>
         <div class="container">
@@ -70,29 +84,22 @@
         </footer>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <div class="sidebar" id="mySidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="https://ecolux.com.pk/">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-        </div>
-        <!-- Sidebar overlay for smartphones -->
-        <div class="overlay" onclick="closeNav()"></div>
-        <!-- Add your JavaScript functions here -->
         <script>
-            // Function to open the sidebar on smartphones
-            function openNavMobile() {
-                document.querySelector(".sidebar").style.width = "250px";
-                document.querySelector(".sidebar").style.left = "0";
-                document.querySelector(".overlay").style.width = "100%";
-                document.querySelector(".overlay").style.display = "block";
-            }
-            // Function to close the sidebar
-            function closeNav() {
-                document.querySelector(".sidebar").style.width = "0";
-                document.querySelector(".sidebar").style.left = "-250px";
-                document.querySelector(".overlay").style.width = "0";
-                document.querySelector(".overlay").style.display = "none";
+            function toggleNav() {
+                var sidebar = document.getElementById("mySidebar");
+                var overlay = document.querySelector(".overlay");
+                
+                if (sidebar.style.width === "250px" || sidebar.style.width === "") {
+                    sidebar.style.width = "0";
+                    sidebar.style.right = "-250px";
+                    overlay.style.width = "0";
+                    overlay.style.display = "none";
+                } else {
+                    sidebar.style.width = "250px";
+                    sidebar.style.right = "0";
+                    overlay.style.width = "100%";
+                    overlay.style.display = "block";
+                }
             }
         </script>
     </body>
