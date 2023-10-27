@@ -54,8 +54,8 @@ header .nav-bar {
 }
 .gallery {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: c;
+    justify-content: start;
     align-items: center;
     gap: 15px;
     max-width: 1400px;
@@ -87,16 +87,18 @@ header .nav-bar {
         margin-left: -35px;
     }
     .gallery {
+        width: auto;
+        height: auto;
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
-        max-width: 844px;
         padding: 20px 10px;
         margin-top: 110px;
         border: 5px;
+        overflow-y: auto;
     }
     .gallery img {
-        max-width: 100%;
+        width: auto;
         height: auto;
         transition: 0.5s;
     }
@@ -205,51 +207,41 @@ a .text:hover{
 }
 @media (max-width: 850px) {
     .sidebar {
-        height: 50%;
-        width: 100%;
-        max-width: 250px;
-        position: fixed;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        flex-direction: column;
-        background-color: #333;
-        transition: 0.5s;
-        z-index: 999;
-        right: 0;
-        border: #00ff37 solid;
+            height: auto;
+            width: 0;
+            position: fixed;
+            background-color: #333;
+            transition: 0.5s;
+            z-index: 999;
+            right: -250px;
+            border: #00ff37 solid;
+            overflow-x: hidden;
         }
     .content {
-        color: #00ff37;
-        transition: margin-left 0.5s;
-
-        display: inline-block;
-        right: 0;
-        position: fixed;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        flex-direction: column;
-        margin-top: -52px;
-        margin-right: 20px;
+            color: #00ff37;
+            transition: margin-left 0.5s;
+            display: inline-block;
+            right: 0;
+            position: fixed;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-direction: column;
+            margin-top: -52px;
+            margin-right: 20px;
         }
     .overlay  {
             height: 100%;
-            width: 100%;
-            max-width: 1400px;
+            width: 0;
             position: fixed;
-
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: linear-gradient(0, 0, 0, 0.1);
             display: none;
-            z-index: -1;
+            z-index: -1;    
         }
     .sidebar a {
             display: flex;
-            justify-content: center;
             width: auto;
             height: auto;
-            padding-right: 90px;
-            padding-bottom: 20px;
             text-align: center;
             align-items: center;
             text-decoration: none;
@@ -258,17 +250,23 @@ a .text:hover{
             display: block;
             transition: 0.3s;
             cursor: pointer; /* Show pointer on hover */
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .sidebar a:not(:last-child){
+            border-bottom: #00ff37 solid 2px;
         }
     .mobobutton{
-        color: black;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: black;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     .sidebar :hover{
-        background-color: #00ff37;
+            background-color: #00ff37;
+            border-radius: 0;
     }
     .sidebar .closebtn {
             position: absolute;

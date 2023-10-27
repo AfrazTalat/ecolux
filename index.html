@@ -45,14 +45,15 @@
                 <p style="font-size:30px;cursor:pointer" onclick="toggleNav()">&#9776;</p>
               </div>
               <div class="mediamobo">
-                <div class="sidebar" id="mySidebar">
-                    <a  href="javascript:void(0)" class="closebtn" onclick="toggleNav()"></a> <!-- Use a single button for open and close -->
-                  <a class="mobobutton" href="#">Home</a>
-                  <a class="mobobutton" href="#">Products</a>
-                  <a class="mobobutton" href="#">Brands</a>
-                  <a class="mobobutton" href="#">About</a>
-                  <a class="mobobutton" href="#">Contact</a>
-                </div>
+                    <div class="sidebar" id="mySidebar">
+                        <a  href="javascript:void(0)" class="closebtn" onclick="toggleNav()"></a> <!-- Use a single button for open and close -->
+                        <a class="mobobutton" href="#">Home</a>
+                        <a class="mobobutton" href="#">Products</a>
+                        <a class="mobobutton" href="#">Brands</a>
+                        <a class="mobobutton" href="#">About</a>
+                        <a class="mobobutton" href="#">Contact Us</a>
+                        <a class="mobobutton" href="#">Posts</a>
+                    </div>
                 <div class="overlay" onclick="toggleNav()"></div>
              </div>
         </header>
@@ -89,7 +90,7 @@
                 var sidebar = document.getElementById("mySidebar");
                 var overlay = document.querySelector(".overlay");
                 
-                if (sidebar.style.width === "250px" || sidebar.style.width === "") {
+                if (window.getComputedStyle(sidebar).right === "0px") {
                     sidebar.style.width = "0";
                     sidebar.style.right = "-250px";
                     overlay.style.width = "0";
