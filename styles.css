@@ -1,22 +1,8 @@
 * {
+    -webkit-tap-highlight-color: transparent;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-a:focus, button:focus {
-    outline: none;
-  }
-.noSelect {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.noSelect:focus {
-    outline: none !important;
 }
 .container {
     max-width: 1400px;
@@ -90,6 +76,7 @@ header .nav-bar {
     transition: transform 0.3s ease; 
 }
 .logobutton{
+    -webkit-tap-highlight-color: transparent;
     margin-left: -35px;
     margin-top: 5px;
 }
@@ -100,6 +87,7 @@ header .nav-bar {
   }
 @media (max-width: 850px) {
     .logobutton{
+        -webkit-tap-highlight-color: transparent;
         margin-left: -35px;
         margin-top: 5px;
         outline: none;
@@ -181,10 +169,12 @@ a .text:hover{
 }
 
 .dropdown {
+    -webkit-tap-highlight-color: transparent;
     position: relative;
     display: inline-block;
 }
 .dropdown-content {
+    -webkit-tap-highlight-color: transparent;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
@@ -198,11 +188,13 @@ a .text:hover{
     display: block;
 }
 .dropdownn {
+    -webkit-tap-highlight-color: transparent;
     position: relative;
     top: 4px;
     left: 5px;
 }
 .dropdown-a{
+    -webkit-tap-highlight-color: transparent;
     transition: 0.5s;
     width: 100%;
     padding: 12px 16px;
@@ -224,18 +216,6 @@ a .text:hover{
     display: none;
 }
 @media (max-width: 850px) {
-    .noSelect {
-        -webkit-tap-highlight-color: transparent;
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-    .noSelect:focus {
-        outline: none !important;
-    }
     .sidebar {
         height: auto;
         width: 0;
@@ -266,6 +246,7 @@ a .text:hover{
             border-radius: 50px;
             align-items: center;
             border: rgb(0, 255, 0) solid 2px;
+            -webkit-tap-highlight-color: transparent;
         }
     .overlay  {
             height: 100%;
@@ -289,6 +270,7 @@ a .text:hover{
             cursor: pointer; /* Show pointer on hover */
             padding-top: 5px;
             padding-bottom: 5px;
+            -webkit-tap-highlight-color: transparent;
         }
         .sidebar a:not(:last-child){
             border-bottom: #00ff37 solid 2px;
@@ -301,6 +283,7 @@ a .text:hover{
             margin: 15px;
         }
          .mobobutton{
+            -webkit-tap-highlight-color: transparent;
             color: black;
             text-align: center;
             display: flex;
