@@ -15,7 +15,6 @@ header {
     position: fixed;
     width: 100%;
 }
-
 header .nav-bar {
     position: relative;
     background-color: rgb(243, 243, 243);
@@ -32,11 +31,12 @@ header .nav-bar {
 .navigation .nav-items a {
     font-size: 1em;
     text-decoration: none;
+    margin-right: -35px;
 }
-
 .navigation .nav-items a:not(:last-child) {
     margin-right: 15px;
     color: black;
+    border-radius: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 @media (max-width: 850px) {
@@ -47,7 +47,7 @@ header .nav-bar {
 .nav-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    margin-left: 25px;
     position: relative;
     max-width: 1400px;
     width: 100%;
@@ -205,17 +205,24 @@ a .text:hover{
 .content {
     display: none;
 }
+
 @media (max-width: 850px) {
+    ::-webkit-scrollbar {
+        display: none;
+      }
     .sidebar {
             height: auto;
             width: 0;
             position: fixed;
-            background-color: #333;
+            background: rgb(2,0,36);
+            background: linear-gradient(299deg, rgba(2,0,36,1) 0%, rgba(24,183,155,1) 52%, rgba(27,208,44,1) 53%, rgba(19,141,41,1) 100%, rgba(0,212,255,1) 100%);
             transition: 0.5s;
             z-index: 999;
             right: -250px;
             border: #00ff37 solid;
             overflow-x: hidden;
+            border-bottom-left-radius: 15px;
+            border-top-left-radius: 15px;
         }
     .content {
             color: #00ff37;
@@ -246,7 +253,7 @@ a .text:hover{
             align-items: center;
             text-decoration: none;
             font-size: 25px;
-            color: #00ff37;
+            color: #ffffff;
             display: block;
             transition: 0.3s;
             cursor: pointer; /* Show pointer on hover */
