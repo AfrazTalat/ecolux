@@ -84,6 +84,9 @@ header .nav-bar {
     }
   }
 @media (max-width: 850px) {
+    a:focus, button:focus {
+        outline: none;
+      }
     .logobutton{
         margin-left: -35px;
         margin-top: 5px;
