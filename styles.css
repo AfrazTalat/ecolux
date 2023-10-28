@@ -91,6 +91,14 @@ header .nav-bar {
         margin-left: -35px;
         margin-top: 5px;
         outline: none;
+        transition: 0.5s;
+    }
+    .logobutton:hover{
+        -webkit-tap-highlight-color: transparent;
+        margin-left: -35px;
+        margin-top: 5px;
+        outline: none;
+        scale: 0.9;
     }
     .gallery {
         width: auto;
@@ -247,6 +255,10 @@ a .text:hover{
             align-items: center;
             border: rgb(0, 255, 0) solid 2px;
             -webkit-tap-highlight-color: transparent;
+            transition: 0.5s;
+        }
+        .content:hover {
+            scale: 0.9;
         }
     .overlay  {
             height: 100%;
@@ -290,10 +302,12 @@ a .text:hover{
             justify-content: center;
             align-items: center;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-         }
+            transition: 0.5s;
+        }
          .sidebar :hover{
             background-color: #00ff37;
             border-radius: 0;
+            scale: 1.1;
         }
          .sidebar .closebtn {
             position: absolute;
@@ -333,7 +347,7 @@ a .text:hover{
   padding: 2px;
   border: #00ff37 solid;
   border-radius: 50px;
-  transition: 0.6s ease;
+  transition: 0.6s;
 }
 .next {
   right: 0;
