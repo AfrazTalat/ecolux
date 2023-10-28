@@ -58,14 +58,43 @@
              </div>
         </header>
         <div class="short"></div>
-        <div class="container">
-            <figure class="gallery">
-                <img src="https://ecolux.com.pk/wp-content/uploads/2023/07/Panasonic-sw-COLOR-181x181b-331x331.jpg.webp" alt="" style="height: 300px; width: 300px;"><br>
-                <img src="https://ecolux.com.pk/wp-content/uploads/2023/07/Panasonic-LED-LIGHTING-181x181b-331x331.jpg.webp" alt="" style="height: 300px; width: 300px;"><br>
-                <img src="https://ecolux.com.pk/wp-content/uploads/2023/07/Fumagalli-Lighting-331x331.jpg.webp" alt="" style="height: 300px; width: 300px;"><br>
-                <img src="https://ecolux.com.pk/wp-content/uploads/2022/06/VENUS-BULB_2048x2048-300x300.jpg.webp" alt="" style="height: 300px; width: 300px;"><br>
-            </figure>
-        </div>
+
+
+        <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <img src="https://ecolux.com.pk/wp-content/uploads/2023/07/Panasonic-sw-COLOR-181x181b-331x331.jpg.webp" style="width: 300px">
+              <div class="text2">Caption Text</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="https://ecolux.com.pk/wp-content/uploads/2023/07/Panasonic-LED-LIGHTING-181x181b-331x331.jpg.webp" style="width: 300px">
+              <div class="text2">Caption Two</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="https://ecolux.com.pk/wp-content/uploads/2023/07/Fumagalli-Lighting-331x331.jpg.webp" style="width: 300px">
+              <div class="text2">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://ecolux.com.pk/wp-content/uploads/2022/06/VENUS-BULB_2048x2048-336x336.jpg.webp" style="width: 300px">
+                <div class="text2">Caption Four</div>
+            </div>
+
+          </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <br>
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+
+
         <div class="container">
             <section class="divi">
                 <span class="headings">About Ecolux:</span>
@@ -83,6 +112,8 @@
             <div class="divfooter"></div>
             <div class="divi"></div>
         </footer>
+
+
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <script>
@@ -102,6 +133,37 @@
                     overlay.style.display = "block";
                 }
             }
+
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            }
+
+            
         </script>
     </body>
 </html>
