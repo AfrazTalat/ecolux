@@ -6,6 +6,18 @@
 a:focus, button:focus {
     outline: none;
   }
+.noSelect {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.noSelect:focus {
+    outline: none !important;
+}
 .container {
     max-width: 1400px;
     width: 100%;
@@ -212,11 +224,17 @@ a .text:hover{
     display: none;
 }
 @media (max-width: 850px) {
-    .content p:focus {
-        outline: none;
-      }
-    .mobobutton a:focus{
-        outline: none;
+    .noSelect {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .noSelect:focus {
+        outline: none !important;
     }
     .sidebar {
         height: auto;
