@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+a:focus, button:focus {
+    outline: none;
+  }
 .container {
     max-width: 1400px;
     width: 100%;
@@ -84,12 +87,10 @@ header .nav-bar {
     }
   }
 @media (max-width: 850px) {
-    a:focus, button:focus {
-        outline: none;
-      }
     .logobutton{
         margin-left: -35px;
         margin-top: 5px;
+        outline: none;
     }
     .gallery {
         width: auto;
@@ -211,6 +212,12 @@ a .text:hover{
     display: none;
 }
 @media (max-width: 850px) {
+    .content p:focus {
+        outline: none;
+      }
+    .mobobutton a:focus{
+        outline: none;
+    }
     .sidebar {
         height: auto;
         width: 0;
@@ -237,7 +244,7 @@ a .text:hover{
             flex-direction: column;
             margin-top: -59px;
             margin-right: 20px;
-            background-color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
             border-radius: 50px;
             align-items: center;
             border: rgb(0, 255, 0) solid 2px;
