@@ -357,7 +357,7 @@ a:not(.logobutton, .dropdown-a, .mobobutton, .closebtn, .prev, .next):hover {
   cursor: pointer;
   position: absolute;
   width: auto;
-  margin: -170px 400px;
+  margin: -170px 300px;
   color: #00ff37;
   font-weight: bold;
   font-size: 18px;
@@ -405,12 +405,12 @@ a:not(.logobutton, .dropdown-a, .mobobutton, .closebtn, .prev, .next):hover {
   from {opacity: .4}
   to {opacity: 1}
 }
-@media (max-width: 850px) {
+@media (max-width: 1090px) {
     .prev, .next {
         cursor: pointer;
         position: absolute;
         width: auto;
-        margin: -170px 30px;
+        margin: -170px 150px;
         color: #00ff37;
         font-weight: bold;
         font-size: 18px;
@@ -432,12 +432,12 @@ a:not(.logobutton, .dropdown-a, .mobobutton, .closebtn, .prev, .next):hover {
         transform: scale(0.9)
       }
 }
-@media (max-width: 1090px) {
+@media (max-width: 850px) {
     .prev, .next {
         cursor: pointer;
         position: absolute;
         width: auto;
-        margin: -170px 150px;
+        margin: -170px 130px;
         color: #00ff37;
         font-weight: bold;
         font-size: 18px;
