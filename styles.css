@@ -38,7 +38,6 @@ header .nav-bar {
 .navigation .nav-items a:not(:last-child) {
     margin-right: 15px;
     color: black;
-    border-radius: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 @media (max-width: 850px) {
@@ -151,22 +150,36 @@ p {
     margin: 10px;
     line-height: 30px;
     font-style: normal;
+    text-align: justify;
 }
+
+/*Nav Links Setting*/
 a {
+    display: flex;
+    width: auto;
+    height: auto;
+    text-align: center;
+    align-items: center;
     transition: 0.5s;
     transition: background-color 0.3s, transform 0.3s;
     border-radius: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    -webkit-tap-highlight-color: transparent;
+    white-space: nowrap;
 }
 a:not(.logobutton, .dropdown-a, .mobobutton, .closebtn, .prev, .next):hover {
-    background-color: rgb(214, 214, 214);
+    background-color: #45b12a; 
+    transform: scale(1.3); 
     border-radius: 10px;
-    background-color: #45b12a; /* Change the background color on hover */
-    transform: scale(1.5); /* Add a simple scale/zoom effect on hover */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
-a .text:hover{
+.text:hover{
     color: rgb(255, 255, 255);
+
 }
+
+/*Div of Footer*/
 .divfooter {
     background-color: #808080;
     min-height: 200px;
@@ -175,6 +188,7 @@ a .text:hover{
     border-bottom: rgb(192, 192, 192) 2px solid;
 }
 
+/*Dropdown menu of Navbar Link*/
 .dropdown {
     -webkit-tap-highlight-color: transparent;
     position: relative;
@@ -284,6 +298,7 @@ a .text:hover{
             padding-top: 5px;
             padding-bottom: 5px;
             -webkit-tap-highlight-color: transparent;
+            white-space: nowrap;
         }
         .sidebar a:not(:last-child){
             border-bottom: #00ff37 solid 2px;
@@ -402,7 +417,7 @@ a .text:hover{
         padding: 2px;
         border: #00ff37 solid;
         border-radius: 50px;
-        transition: 0.5s;
+        transition: 0.01s;
         transform: scale(1)
       }
       .next {
@@ -412,8 +427,8 @@ a .text:hover{
           left: 0;
       }
       .prev:active, .next:active {
-         background-color: white(0, 255, 0, 0.8);
-         color: rgba(0, 255, 0, 0.8);
-         transform: scale(0.9)
+        background-color: rgba(0, 255, 0, 0.8);
+        color: white;
+        transform: scale(0.9)
       }
 }
