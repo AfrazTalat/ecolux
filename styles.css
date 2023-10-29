@@ -432,3 +432,30 @@ a:not(.logobutton, .dropdown-a, .mobobutton, .closebtn, .prev, .next):hover {
         transform: scale(0.9)
       }
 }
+@media (max-width: 1090px) {
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        width: auto;
+        margin: -170px 150px;
+        color: #00ff37;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 2px;
+        border: #00ff37 solid;
+        border-radius: 50px;
+        transition: 0.01s;
+        transform: scale(1)
+      }
+      .next {
+        right: 0;
+      }
+      .prev{
+          left: 0;
+      }
+      .prev:active, .next:active {
+        background-color: rgba(0, 255, 0, 0.8);
+        color: white;
+        transform: scale(0.9)
+      }
+}
