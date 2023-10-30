@@ -437,7 +437,7 @@ a:not(.logobutton, .dropdown-a, .mobobutton, .closebtn, .prev, .next):hover {
         cursor: pointer;
         position: absolute;
         width: auto;
-        margin: -170px 130px;
+        margin: -170px 15px;
         color: #00ff37;
         font-weight: bold;
         font-size: 18px;
@@ -459,3 +459,6 @@ a:not(.logobutton, .dropdown-a, .mobobutton, .closebtn, .prev, .next):hover {
         transform: scale(0.9)
       }
 }
+    .dropdown-content{
+        border-radius:6px;
+    }
